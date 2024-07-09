@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+     <link rel="stylesheet" href="./Trangchu.css">
+</head>
+<body>
+    <div class="menu-dt">
+        <div><img src="./Ảnh chụp màn hình 2024-02-20 100848.png" widht="70px" height="70px"></div>
+        <ul>
+          <li><a href="./Trangchu.html">Trang chủ</a></li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Điện thoại </a>
+            <div class="dropdown-content">
+                <a href="./iphone.html">Iphone</a>
+                <a href="./Samung.html">SamSung</a>
+                <a href="./oppo.html">Oppo </a>
+                <a href="./Xiaomi.html">Xiaomi</a>
+             
+            </div>
+        </li>
+          <li><a href="./Phukiendt.html">Linh kiện</a></li>
+          <li><a href="https://cellphones.com.vn/danh-sach-khuyen-mai">Khuyến mãi</a></li>
+       
+        </ul>
+        <div class="tim-kiem">
+          <input type="text" placeholder="Nhập tên phim hoặc từ khóa...">
+       
+          <a href="./login.html">
+            <img src="https://cdn.iconscout.com/icon/free/png-256/free-account-2375512-1989469.png" alt="Icon" width="25" height="25">
+          </a>
+          
+        </div>
+      </div>
+    <div class="khung-chua">
+        <div class="hinh-san-pham"> <h1>Xiaomi Redmi Note 13 6GB </h1>
+            <img id="hinhLon" src="https://cdn2.cellphones.com.vn/358x/media/catalog/product/d/o/download_4__12_2.png" alt="😀">
+            <div class="hinh-nho">
+                <img src="https://cdn2.cellphones.com.vn/358x/media/catalog/product/d/o/downloadnote_13.png" alt="Hình nhỏ 1" onclick="thayDoiHinh('https://cdn2.cellphones.com.vn/358x/media/catalog/product/d/o/downloadnote_13.png')"><img src="https://cdn2.cellphones.com.vn/358x/media/catalog/product/d/o/download_3__11.png" alt="Hình nhỏ 2" onclick="thayDoiHinh('https://cdn2.cellphones.com.vn/358x/media/catalog/product/d/o/download_3__11.png')">
+                
+            </div>
+        </div>
+        <div class="chi-tiet-san-pham">
+         
+            <div class="gia">
+                <span class="gia-moi">Giá: 42.990.000đ</span>
+                <br>
+                <span class="gia-cu">44.000.000đ</span><br>
+            </div>
+            <div class="lua-chon-size">
+                <label for="kichThuoc">Dung lượng </label>
+                <select id="kichThuoc">
+                    <option value="L">128GB</option>
+                    <option value="M">256GB</option>
+                    <option value="S">1T</option>
+                </select>
+            </div>
+            <div class="lua-chon-so-luong">
+                <label>Số lượng </label>
+                <button onclick="thayDoiSoLuong(-1)">-</button>
+                <input type="text"placeholder id="soLuong" value="1">
+                <button onclick="thayDoiSoLuong(1)">+</button>
+            </div>
+            <buton  class="dat-hang">Đặt hàng </buton>
+            <button class="them-vao-gio-hang">Thêm vào giỏ hàng </button>
+            <div class="khuyen-mai">
+                <h3>Thông tin sản phẩm</h3>
+                <ul>
+                    <li>Thiết kế khung viền từ titan chuẩn hàng không vũ trụ - Cực nhẹ, bền cùng viền cạnh mỏng cầm nắm thoải mái</li>
+                    <li>Hiệu năng Pro chiến game thả ga - Chip A17 Pro mang lại hiệu năng đồ họa vô cùng sống động và chân thực</li
+                    <li>Thoả sức sáng tạo và quay phim chuyên nghiệp - Cụm 3 camera sau đến 48MP và nhiều chế độ tiên tiến</li>
+                    <li> Nút tác vụ mới giúp nhanh chóng kích hoạt tính năng yêu thích của bạn</li> 
+                </ul>
+            </div>
+            <div class="khuyen-mai">
+                <h3>Ưu đãi</h3>
+                <ul>
+                    <li>✅Máy mới 100% , chính hãng Apple Việt Nam.</li>
+                    <li>✅Hộp, Sách hướng dẫn, Cây lấy sim, Cáp Lightning - Type C</li>
+                    <li>✅Chính sách bảo hành 12 tháng, 1 Đổi 1 nếu máy bị lỗi</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        function thayDoiHinh(duongDanHinh) {
+    var hinhLon = document.getElementById("hinhLon");
+    hinhLon.src = duongDanHinh;
+}
+
+function thayDoiSoLuong(thayDoi) {
+    var inputSoLuong = document.getElementById("soLuong");
+    var soLuongHienTai = parseInt(inputSoLuong.value);
+    var soLuongMoi = soLuongHienTai + thayDoi;
+
+    if (soLuongMoi > 0) {
+        inputSoLuong.value = soLuongMoi;
+    }
+}
+    </script>
+</body>
+</html>
